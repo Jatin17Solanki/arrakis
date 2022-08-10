@@ -8,8 +8,8 @@ INSERT INTO Security VALUES (12, 'abc2', 'def2', 'Jatin', '2022-07-03', 10.0, 'r
 INSERT INTO book VALUES (101, 'first book');
 INSERT INTO book VALUES (102, 'second book');
 
-INSERT INTO users VALUES (1, 'fic-user1', 'abc@gmail.com', 'admin');
-INSERT INTO users VALUES (2, 'fic-user2', 'xyz@gmail.com', 'fic');
+INSERT INTO users VALUES (1, 'fic-user1', 'abc@gmail.com', 'FIC');
+INSERT INTO users VALUES (2, 'fic-user2', 'xyz@gmail.com', 'FIC');
 
 INSERT INTO book_User VALUES (100001,101,1);
 INSERT INTO book_User VALUES (100002,102,2);
