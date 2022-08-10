@@ -132,7 +132,11 @@ export default function Sidebar(props) {
                 <div className="sidebar-brand">
                     <h2>BONDS</h2>
                     <hr style={{ color: "grey", height: "10px" }} />
+                    {/* <button className='btn btn-danger'>
+                        Logout
+                    </button> */}
                 </div>
+
                 <ul className="sidebar-nav">
                     {/* {menuItem.map((item) => (
                         <li
@@ -190,14 +194,21 @@ export default function Sidebar(props) {
                         </Link>
                     </li>}
 
-                    <li key={'logout'} onClick={() => {
+                    {/* <li key={'logout'} onClick={() => {
                         localStorage.clear();
                     }}>
                         <Link to={'/login'}>
                             <i className="fas fa-sign-out-alt icon"></i>
                             <div className='text-danger'>LOGOUT</div>
                         </Link>
-                    </li>
+                    </li> */}
+                    <div className='px-3 mt-3'>
+                        <Link to={'/login'}>
+                            <button className='btn btn-danger w-100'>
+                                <div className='h5'>Logout</div>
+                            </button>
+                        </Link>
+                    </div>
                 </ul>
             </aside>
             <div id="navbar-wrapper">

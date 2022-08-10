@@ -71,7 +71,7 @@ function Employees(props) {
         }
         else {
 
-            const tmp = await postEmp("empNo");
+            let tmp = getItem("empNo");
             if (!tmp) {
                 setItem("empNo", 100);
                 tmp = 100;

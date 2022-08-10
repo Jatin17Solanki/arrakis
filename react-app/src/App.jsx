@@ -32,32 +32,32 @@ const App = () => {
                     <Route path="/" exact element={<ProtectedRoute />} />
                     <Route path="/login" exact element={<Login />} />
                     <Route path="/Securities" element={
-                        <AppLayout>
+                        <AppLayout role="admin">
                             <Securities />
                         </AppLayout>
                     } />
                     <Route path="/Trades" element={
-                        <AppLayout>
+                        <AppLayout role="admin">
                             <Trades />
                         </AppLayout>
                     } />
                     <Route path="/Employees" element={
-                        <AppLayout>
+                        <AppLayout role="admin">
                             <Employees />
                         </AppLayout>
                     } />
                     <Route path="/Books" element={
-                        <AppLayout>
+                        <AppLayout role="admin">
                             <Books />
                         </AppLayout>
                     } />
                     <Route path="/Dashboard" element={
-                        <AppLayout>
+                        <AppLayout role="employee">
                             <DashBoard />
                         </AppLayout>
                     } />
                     <Route path="/Party" element={
-                        <AppLayout>
+                        <AppLayout role="admin">
                             <Party />
                         </AppLayout>
                     } />
