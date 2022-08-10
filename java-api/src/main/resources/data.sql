@@ -18,6 +18,5 @@ INSERT INTO book_User VALUES (100002,102,2);
 INSERT INTO counterparty VALUES (1001, 'User1');
 INSERT INTO counterparty VALUES (1002, 'User2');
 
-INSERT INTO trade VALUES (10001, 101, 1001, 11, 50, 'status1', 20000, 'buy', '2022-07-01', '2022-08-05', 0);
---INSERT INTO trades VALUES (10001, 101, 1001, 11, 50, 'status1', 20000, 'buy', '2022-07-01', '2022-08-05');
-INSERT INTO trade VALUES (10002, 102, 1002, 12, 60, 'status2', 20000, 'buy', '2020-05-01', '2020-06-01', 0);
+INSERT INTO trade VALUES (10001, 101, 1001, 11, 50, 'Active', 20000, 'Buy', '2022-07-01', '2022-08-05', 0);
+INSERT INTO trade VALUES (10002, 102, 1002, 12, 60, 'Failed', 20000, 'Buy', '2020-05-01', '2020-06-01', 0);
