@@ -1,0 +1,13 @@
+.baseTable {
+    width: 100%;
+    overflow-x: auto;
+  
+    .bTRow {
+      width: 100%;
+  
+      .hov {
+        cursor: pointer !important;
+      }
+    }
+  }
+  

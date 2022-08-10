@@ -1,0 +1,13 @@
+Books
+- no add book api
+- no update book api
+
+counterParty
+- no edit
+
+TODO
+-------------------------------------------------------------
+DELETE A SECURITY
+SECUTRITIES MODAL NOT WORKING, CSS
+manage trade status
+cant add book
