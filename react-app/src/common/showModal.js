@@ -67,6 +67,10 @@ export function ShowSecurityModal(show, handleClose, data) {
         getSecData();
     }, [data]);
 
+    useEffect(() => {
+        console.log(secData);
+    })
+
     const mapping = [
         {
             dataField: 'bookId',
@@ -110,8 +114,8 @@ export function ShowSecurityModal(show, handleClose, data) {
         show={show}
         size="xl"
         onHide={handleClose}
-        fullscreen="sm-down"
-        contentClassName="rounded-xl"
+        // fullscreen="sm-down"
+        // contentClassName="rounded-xl"
         centered
     >
         <Modal.Header closeButton>
@@ -120,11 +124,11 @@ export function ShowSecurityModal(show, handleClose, data) {
         <Modal.Body className="pb-5 pt-4 px-sm-5 px-4">
             <table className='table'>
                 <thead>
-                    <th>
+                    <tr>
                         {mapping.map(obj => {
-                            return <td className='text-center'> {obj.text} </td>
+                            return <th className='text-center'> {obj.text} </th>
                         })}
-                    </th>
+                    </tr>
                 </thead>
                 <tbody>
                     {/* <tr>
@@ -134,10 +138,17 @@ export function ShowSecurityModal(show, handleClose, data) {
                         <td>Hello</td>
                     </tr> */}
                     {secData.map(row => {
+                        console.log(row);
                         return <tr>
-                            {/* {mapping.map(obj => {
-                                return <td className='text-center'> {row[obj.dataField]} </td>
-                            })} */}
+                            <td className='text-center'>{row.bookId}</td>
+                            <td className='text-center'>{row.counterPartyId}</td>
+                            <td className='text-center'>{row.securityId}</td>
+                            <td className='text-center'>{row.quantity}</td>
+                            <td className='text-center'>{row.status}</td>
+                            <td className='text-center'>{row.price}</td>
+                            <td className='text-center'>{row.buySell}</td>
+                            <td className='text-center'>{row.tradeDate}</td>
+                            <td className='text-center'>{row.settlementDate}</td>
                         </tr>
                     })}
                 </tbody>

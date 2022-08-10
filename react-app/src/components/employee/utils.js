@@ -3,28 +3,37 @@ import axios from "axios";
 import { hostNameUrl } from "../../common/config";
 
 const dashboardActionColumn = (props) => {
-    const handleAssignTrade = async () => {
-        console.log(props);
-        // const resp = await axios({
-        //     method: "PUT",
-        //     url: `${hostNameUrl}/api/trade/updateManager?tradeId=${}&userId=${}`,
-        //     data: data,
-        //     headers: {
-        //         "Content-Type" : "application/json",
-        //     }
-        // });
-    }
+    console.log(props);
+    // const handleAssignTrade = async () => {
+    //     console.log(props);
+    //     const resp = await axios({
+    //         method: "PUT",
+    //         url: `${hostNameUrl}/api/trade/updateManager?tradeId=${props.ditem.id}&userId=${props.empId}`,
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         }
+    //     });
+
+    //     if (resp.status === 200) {
+    //         window.location.reload();
+    //     }
+    // }
 
     return (
         <>
-            {props.ditem.assigned_to == "0" ?
-                <button  type="button" className="btn btn-primary" onClick={handleAssignTrade}>
-                    Assign to Me
+            {props.ditem.status == "Settled" ?
+                <button type="button" className="btn btn-secondary">
+                    -
                 </button>
-                : 
-                <button  type="button" className="btn btn-secondary">
-                    Already Assigned
-                </button>
+                :
+                props.ditem.assigned_to == "0" ?
+                    <button type="button" className="btn btn-primary" onClick={() => props.setList(props)}>
+                        Assign to Me
+                    </button>
+                    :
+                    <button type="button" className="btn btn-secondary">
+                        Assigned
+                    </button>
             }
         </>
     );

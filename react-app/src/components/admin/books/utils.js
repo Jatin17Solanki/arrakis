@@ -29,11 +29,11 @@ const columns = [
     //     dataField: 'status',
     //     text: 'status',
     // },
-    {
-        dataField: BookActionColumn,
-        text: 'Actions',
-        format: 'action',
-    },
+    // {
+    //     dataField: BookActionColumn,
+    //     text: 'Actions',
+    //     format: 'action',
+    // },
 ];
 
 export {

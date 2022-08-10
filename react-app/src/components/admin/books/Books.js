@@ -95,8 +95,7 @@ function Books(props) {
     return (
         <div style={{ ...componentStyle, }}>
             <SetHeader title="Manage Books">
-                <BooksModal handleAddEdit={handleAddEdit} />
-
+                
             </SetHeader>
             <BaseTable showModal={ShowBookModal} cols={columns} data={booksList} setList={handleAddEdit} />
         </div>

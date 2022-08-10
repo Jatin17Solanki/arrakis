@@ -110,7 +110,7 @@ const Login = () => {
                                     <span className="me-2">
                                         {/* <i class="fas fa-sign-in-alt"></i> */}
                                     </span>
-                                    Login as an Emplpoyee
+                                    Login as an Employee
                                 </button>
                             </div>
                         </Form>

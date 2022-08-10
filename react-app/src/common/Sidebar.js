@@ -130,7 +130,8 @@ export default function Sidebar(props) {
         <div id="wrapper">
             <aside id="sidebar-wrapper" className="border-tr-br-xl">
                 <div className="sidebar-brand">
-                    <h2>$</h2>
+                    <h2>BONDS</h2>
+                    <hr style={{ color: "grey", height: "10px" }} />
                 </div>
                 <ul className="sidebar-nav">
                     {/* {menuItem.map((item) => (
@@ -153,31 +154,32 @@ export default function Sidebar(props) {
                     ))} */}
                     {isAdmin && <li key={'Securities'} onClick={() => { }}>
                         <Link to={'/Securities'}>
-                            <i className="fas fa-sign-out-alt icon"></i>
+                            <i className="fas fa-suitcase icon"></i>
                             Securities
                         </Link>
                     </li>}
                     {isAdmin && <li key={'Books'} onClick={() => { }}>
                         <Link to={'/Books'}>
-                            <i className="fas fa-sign-out-alt icon"></i>
+                            <i className="fas fa-book icon"></i>
                             Books
                         </Link>
                     </li>}
                     {isAdmin && <li key={'Party'} onClick={() => { }}>
                         <Link to={'/Party'}>
-                            <i className="fas fa-sign-out-alt icon"></i>
+                            <i className="fas fa-user icon"></i>
                             Counter Party
                         </Link>
                     </li>}
                     {isAdmin && <li key={'Trades'} onClick={() => { }}>
                         <Link to={'/Trades'}>
-                            <i className="fas fa-sign-out-alt icon"></i>
+                            <i className="fas fa-arrows-h icon"></i>
                             Trades
                         </Link>
                     </li>}
                     {isAdmin && <li key={'Employees'} onClick={() => { }}>
                         <Link to={'/Employees'}>
-                            <i className="fas fa-sign-out-alt icon"></i>
+                            {/* <i className="fas fa-sign-out-alt icon"></i> */}
+                            <i className="fas fa-users icon" > </i>
                             Employees
                         </Link>
                     </li>}
@@ -188,7 +190,9 @@ export default function Sidebar(props) {
                         </Link>
                     </li>}
 
-                    <li key={'logout'} onClick={() => { setItem("role", "") }}>
+                    <li key={'logout'} onClick={() => {
+                        localStorage.clear();
+                    }}>
                         <Link to={'/login'}>
                             <i className="fas fa-sign-out-alt icon"></i>
                             <div className='text-danger'>LOGOUT</div>
@@ -201,7 +205,7 @@ export default function Sidebar(props) {
                     <div className="container-fluid">
                         <div className="navbar-header">
                             <div
-                                style={{cursor:'pointer'}}
+                                style={{ cursor: 'pointer' }}
                                 className="navbar-brand"
                                 id="sidebar-toggle"
                                 onClick={() => sidebarToggle()}

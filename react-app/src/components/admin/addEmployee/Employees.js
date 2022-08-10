@@ -71,7 +71,7 @@ function Employees(props) {
         }
         else {
 
-            const tmp = getItem("empNo");
+            const tmp = await postEmp("empNo");
             if (!tmp) {
                 setItem("empNo", 100);
                 tmp = 100;
@@ -82,6 +82,8 @@ function Employees(props) {
                 id: tmp,
                 role: "FIC",
             }
+
+            console.log(details);
 
             const resp = await postEmp(details);
 

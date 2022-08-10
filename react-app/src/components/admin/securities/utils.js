@@ -5,6 +5,9 @@ const securityActionColumn = (props) => {
 
     const handleDeleteSecurity = async (data) => {
         const resp = await deleteSecurity(data);
+        if(resp.status === 200) {
+            window.location.reload();
+        }
     }
 
     return (

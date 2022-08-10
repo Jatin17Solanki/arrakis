@@ -11,3 +11,5 @@ DELETE A SECURITY
 SECUTRITIES MODAL NOT WORKING, CSS
 manage trade status
 cant add book
+
+ADD emps
